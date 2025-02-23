@@ -1,5 +1,6 @@
-import { Avatar, Col, Row, Select, Space } from "antd";
+import { Avatar, Col, Row, Select, Space, Button } from "antd";
 import CardData from "./component/CardData";
+import Pay from "./component/Pay";
 import "./dashboard.scss";
 import DataTable from "./component/DataTable";
 import TotalSpent from "./component/TotalSpent";
@@ -29,6 +30,14 @@ import TopMarket from "./component/TopMarket";
 const Dashboard = () => {
   return (
     <>
+    <Space size="large" className="carddata-space">
+        <Row gutter={[14, 14]}>
+          <Col xs={24} sm={24} md={12} lg={8} xxl={4}>
+            <Pay />
+          </Col>
+        </Row>
+      </Space>
+
       <Space size="large" className="carddata-space">
         <Row gutter={[14, 14]}>
           <Col xs={24} sm={24} md={12} lg={8} xxl={4}>

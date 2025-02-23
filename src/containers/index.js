@@ -6,6 +6,7 @@ import Dashboard from "../dashboard/Dashboard";
 import DataTables from "../dashboard/dataTables/DataTables";
 import SsoSetup from "../dashboard/ssosetup/SsoSetup";
 import Widgets from "../dashboard/widgets/widgets";
+import Transfer from "../dashboard/transfer/transfer";
 import Audit from "../dashboard/audit/audit";
 import ProjectLayout from "../layout/ProjectLayout";
 import Profile from "../dashboard/profile/profile";
@@ -20,6 +21,7 @@ const Container = () => {
         <Route path="admin/data-tables" element={<DataTables />} />
         <Route path="admin/sso-setup" element={<SsoSetup />} />
         <Route path="admin/widgets" element={<Widgets />} />
+        <Route path="transfer" element={<Transfer />} />
         <Route path="admin/audit" element={<Audit />} />
         <Route path="user/profile" element={<Profile />} />
         <Route path="user/apps" element={<Apps />} />

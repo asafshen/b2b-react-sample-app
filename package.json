@@ -2,6 +2,7 @@
   "name": "b2b-sample-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5001",
   "dependencies": {
     "@ant-design/icons": "5.0.1",
     "@chakra-ui/react": "^2.8.2",
@@ -14,7 +15,13 @@
     "@testing-library/user-event": "14.4.3",
     "antd": "5.12.7",
     "apexcharts": "3.41.0",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "esm": "^3.2.25",
+    "express": "^4.21.2",
     "framer-motion": "10.17.4",
+    "nodemon": "^3.1.0",
     "prismjs": "1.29.0",
     "react": "18.2.0",
     "react-apexcharts": "1.4.0",
@@ -27,13 +34,13 @@
     "react-switch": "7.0.0",
     "react-table": "7.8.0",
     "sass": "1.69.7",
+    "ts-node": "^10.8.2",
     "web-vitals": "3.5.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "concurrently \"npm run startServer\" \"npm run startClient\"",
+    "startClient": "react-scripts start",
+    "startServer": "node server.mjs"
   },
   "eslintConfig": {
     "extends": [
